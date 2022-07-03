@@ -1,28 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600&display=swap');
 @import url('https://css.gg/push-left.css');
 
-$numbBtnsColor: #ccffcc;
-$sideBtnsColor: #ddff99;
-$containerColor: #34568b;
-$inputTextColor: #000000;
-$buttonTextColor: #000000;
-$borderColor: #29293d;
-$inputBgColor: #ffff;
-
-  $blue: rgb(26, 57, 87);
-  $white: rgb(236, 236, 236);
 
 
-body.light {
-  background-color: $white;
-  color: $white;
-  font-weight: 400;
-}
-body.dark {
-  background-color: $blue;
-  color: $blue;
-  font-weight: 500;
-}
+$numbBtnsColor: #f2f2f2; //#ccffcc
+$sideBtnsColor: #e6ffff; // #ddff99
+$containerColor: #fff; // #34568b
+$inputTextColor: #000000; //
+$buttonTextColor: #1a1a00; // #000000
+$borderColor: #29293d; //
+$inputBgColor: #ffff; //
+$toggleLightBg: #fff;
+$toggleDarkBg: #000;
+
 
 * {
   font-family: 'Arimo', sans-serif;
@@ -44,8 +34,16 @@ body {
   width: 256px;
   text-align: center;
   border: 15px solid $borderColor;
-  background-color: $containerColor;
   border-radius: 20px;
+  background-color: $containerColor;
+}
+
+#light {
+  background-color: $toggleLightBg;
+}
+
+#dark {
+  background-color: $toggleDarkBg;
 }
 
 .keypad {
