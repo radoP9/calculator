@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faDeleteLeft, faEquals, faEye} from '@fortawesome/free-solid-svg-icons'
+import {MetaTags} from "react-meta-tags";
 import "../styles/App.scss";
 
 
@@ -59,37 +60,42 @@ const App = () => {
 
     return (
         <>
-            <div className={theme === "light" ? "container light" : "container dark"}>
-                <form>
-                    <input type="text" value={result}/>
-                </form>
+            <div className="calculator">
+                <MetaTags>
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+                </MetaTags>
+                <div className={theme === "light" ? "container light" : "container dark"}>
+                    <form>
+                        <input type="text" value={result}/>
+                    </form>
 
-                <div className="keypad" id="text">
-                    <button className="sideBtns" onClick={handleClear} id="clear">Clear</button>
-                    <button className="sideBtns" onClick={handleBackspace} id="backspace">
-                        <FontAwesomeIcon icon={faDeleteLeft}/>
-                    </button>
-                    <button className="sideBtns" value="/" onClick={handleClick}>&divide;</button>
-                    <button value="7" onClick={handleClick}>7</button>
-                    <button value="8" onClick={handleClick}>8</button>
-                    <button value="9" onClick={handleClick}>9</button>
-                    <button className="sideBtns" value="*" onClick={handleClick}>&times;</button>
-                    <button value="4" onClick={handleClick}>4</button>
-                    <button value="5" onClick={handleClick}>5</button>
-                    <button value="6" onClick={handleClick}>6</button>
-                    <button className="sideBtns" value="-" onClick={handleClick}>&ndash;</button>
-                    <button value="1" onClick={handleClick}>1</button>
-                    <button value="2" onClick={handleClick}>2</button>
-                    <button value="3" onClick={handleClick}>3</button>
-                    <button className="sideBtns" value="+" onClick={handleClick}>+</button>
-                    <button value="0" onClick={handleClick}>0</button>
-                    <button value="." onClick={handleClick}>,</button>
-                    <button className="sideBtns" onClick={handleCalculate} id="result">
-                        <FontAwesomeIcon icon={faEquals}/>
-                    </button>
-                    <button>
-                        <FontAwesomeIcon icon={faEye} onClick={toggleTheme}/>
-                    </button>
+                    <div className="keypad" id="text">
+                        <button className="sideBtns" onClick={handleClear} id="clear">Clear</button>
+                        <button className="sideBtns" onClick={handleBackspace} id="backspace">
+                            <FontAwesomeIcon icon={faDeleteLeft}/>
+                        </button>
+                        <button className="sideBtns" value="/" onClick={handleClick}>&divide;</button>
+                        <button value="7" onClick={handleClick}>7</button>
+                        <button value="8" onClick={handleClick}>8</button>
+                        <button value="9" onClick={handleClick}>9</button>
+                        <button className="sideBtns" value="*" onClick={handleClick}>&times;</button>
+                        <button value="4" onClick={handleClick}>4</button>
+                        <button value="5" onClick={handleClick}>5</button>
+                        <button value="6" onClick={handleClick}>6</button>
+                        <button className="sideBtns" value="-" onClick={handleClick}>&ndash;</button>
+                        <button value="1" onClick={handleClick}>1</button>
+                        <button value="2" onClick={handleClick}>2</button>
+                        <button value="3" onClick={handleClick}>3</button>
+                        <button className="sideBtns" value="+" onClick={handleClick}>+</button>
+                        <button value="0" onClick={handleClick}>0</button>
+                        <button value="." onClick={handleClick}>,</button>
+                        <button className="sideBtns" onClick={handleCalculate} id="result">
+                            <FontAwesomeIcon icon={faEquals}/>
+                        </button>
+                        <button>
+                            <FontAwesomeIcon icon={faEye} onClick={toggleTheme}/>
+                        </button>
+                    </div>
                 </div>
             </div>
         </>
