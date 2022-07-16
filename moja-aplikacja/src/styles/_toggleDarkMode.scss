@@ -1,0 +1,18 @@
+
+.light {
+  background-color: $toggleLightBg;
+}
+
+.dark {
+  background-color: $toggleDarkBg;
+  input {
+    background-color: $toggleDarkBg;
+    color: $toggleInputTxt;
+  }
+  .sideBtns {
+    background-color: $toggleSideBtns;
+  }
+  button {
+    background-color: $toggleBtns;
+  }
+}
