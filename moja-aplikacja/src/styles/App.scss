@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600&display=swap');
 @import url('https://css.gg/push-left.css');
 @import "variables";
-@import "toggleDarkMode";
-@import "media";
+
 
 * {
   font-family: 'Arimo', sans-serif;
@@ -77,9 +76,33 @@ button {
   }
 }
 
+.light {
+  background-color: $toggleLightBg;
+}
+
+.dark {
+  background-color: $toggleDarkBg;
+  input {
+    background-color: $toggleDarkBg;
+    color: $toggleInputTxt;
+  }
+  .sideBtns {
+    background-color: $toggleSideBtns;
+  }
+  button {
+    background-color: $toggleBtns;
+  }
+}
+
 .sideBtns {
   background-color: $sideBtnsColor;
   color: $buttonTextColor;
 }
 
+@media only screen and (max-width: 800px) {
+  body {
+    display: unset;
+    padding-top: 0;
+  }
+}
 

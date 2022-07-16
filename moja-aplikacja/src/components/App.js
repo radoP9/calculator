@@ -24,7 +24,6 @@ const App = () => {
         setResultArray([...resultArray, result])
     }, [ifTrue])
 
-
     useEffect(() => {
         if (theme === "light") {
             document.querySelector("body").style.backgroundColor = "#f2f2f2";
